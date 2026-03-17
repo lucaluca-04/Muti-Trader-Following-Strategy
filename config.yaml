@@ -1,0 +1,41 @@
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+
+output:
+  figures_dir: "output/figures"
+  reports_dir: "output/reports"
+
+backtest:
+  trading_days_per_year: 252
+  min_days: 30
+  lookback_days: 0        # 0 means expanding window
+  rebalance_freq: "ME"    # month-end
+  core_ratio: 0.8         # target weight in Core layer
+  min_cluster_size: 8
+  top_traders_per_cluster: 3
+
+profiling:
+  core_std_threshold: 0.055
+  max_dd_exclude: 0.95
+
+market:
+  venue: "Hyperliquid"
+  product_type: "perpetual_futures"
+  quote_currency: "USDT"
+
+fees:
+  # Approximate round-trip trading fees on Hyperliquid (in basis points).
+  # These are **strategy-level** assumptions, not raw exchange tiers.
+  taker_fee_bps: 5.0      # 0.05% per side if crossing the book
+  maker_fee_bps: 0.0      # assume no maker rebate for simplicity
+
+slippage:
+  # Simplified slippage model in basis points of traded notional.
+  # Applied together with fees based on portfolio turnover at each rebalance.
+  fixed_bps: 2.0          # 0.02% round-trip baseline slippage
+
+capacity:
+  # High-level capacity / concentration assumptions at the portfolio layer.
+  max_weight_per_trader: 0.25   # hard cap on single-trader allocation in rolling backtest
+

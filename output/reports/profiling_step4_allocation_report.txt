@@ -1,0 +1,26 @@
+Cluster-based allocation report
+============================================================
+
+Method: Risk parity (equal risk contribution, full covariance) + Sharpe tilt + capacity caps.
+Eligibility: Excluded cluster -1 (noise) and clusters with median_max_drawdown_synth >= 0.95.
+Capacity: Max weight per cluster from median_ret_prev_equity_corr (strong negative => lower cap).
+
+Eligible clusters (after exclusion): 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+
+Weights (final):
+  Cluster  0  weight=   ~0%  cap=25.00%  Sharpe=1.925  ann_vol=696.98%  ann_ret=1342.01%
+  Cluster  1  weight=11.00%  cap=20.00%  Sharpe=1.532  ann_vol=95.70%  ann_ret=146.61%
+  Cluster  2  weight=16.72%  cap=15.00%  Sharpe=3.926  ann_vol=41.40%  ann_ret=162.53%
+  Cluster  3  weight=14.21%  cap=20.00%  Sharpe=1.978  ann_vol=46.59%  ann_ret=92.16%
+  Cluster  4  weight=   ~0%  cap=25.00%  Sharpe=1.936  ann_vol=106.49%  ann_ret=206.16%
+  Cluster  5  weight=   ~0%  cap=25.00%  Sharpe=4.053  ann_vol=76.14%  ann_ret=308.61%
+  Cluster  6  weight=19.36%  cap=20.00%  Sharpe=2.696  ann_vol=150.41%  ann_ret=405.51%
+  Cluster  7  weight=17.07%  cap=25.00%  Sharpe=2.377  ann_vol=156.59%  ann_ret=372.19%
+  Cluster  8  weight=21.64%  cap=25.00%  Sharpe=3.013  ann_vol=26.66%  ann_ret=80.34%
+  Cluster  9  weight=   ~0%  cap=25.00%  Sharpe=1.873  ann_vol=14.15%  ann_ret=26.51%
+  Cluster 10  weight=   ~0%  cap=20.00%  Sharpe=6.293  ann_vol=12.96%  ann_ret=81.54%
+  Cluster 11  weight=   ~0%  cap=25.00%  Sharpe=1.440  ann_vol=515.13%  ann_ret=741.56%
+
+Sum of weights: 1.0000
+
+Note: Near-zero weights occur when a cluster has high correlation with others or high marginal risk contribution under risk parity (correlation-aware). Capacity caps bind for clusters with strong negative ret_prev_equity_corr (e.g. Cluster 2 cap 15%%, Cluster 3 cap 10%%).

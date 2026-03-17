@@ -1,0 +1,57 @@
+Cluster profiles (HDBSCAN) with strategy-type interpretation
+============================================================
+
+Cluster -1  (n=490)  strategy_type: High risk / High return
+  (noise: traders not assigned to any cluster)
+
+Cluster 0  (n=24)  strategy_type: High risk / High return | Large size
+  mean_return=0.0073  std_return=0.1008  max_drawdown_synth=0.5690
+  ret_prev_equity_corr=0.0375  avg_equity=10800058  acf1_return=0.0005
+
+Cluster 1  (n=25)  strategy_type: Low volatility | Negative AUM sensitivity | Small size | Vol clustering
+  mean_return=0.0019  std_return=0.0500  max_drawdown_synth=0.4423
+  ret_prev_equity_corr=-0.1514  avg_equity=13520  acf1_return=-0.0539
+
+Cluster 2  (n=23)  strategy_type: Higher mean return | Negative AUM sensitivity | Small size | Momentum / Trend
+  mean_return=0.0217  std_return=0.0668  max_drawdown_synth=0.0860
+  ret_prev_equity_corr=-0.4506  avg_equity=12265  acf1_return=0.3565
+
+Cluster 3  (n=31)  strategy_type: Negative AUM sensitivity | Small size | Mean-reversion | Vol clustering
+  mean_return=0.0063  std_return=0.0821  max_drawdown_synth=0.4455
+  ret_prev_equity_corr=-0.1857  avg_equity=11309  acf1_return=-0.2976
+
+Cluster 4  (n=58)  strategy_type: Higher tail risk | Vol clustering
+  mean_return=0.0003  std_return=0.0786  max_drawdown_synth=0.7006
+  ret_prev_equity_corr=-0.0531  avg_equity=18519  acf1_return=-0.0043
+
+Cluster 5  (n=60)  strategy_type: High risk / High return
+  mean_return=0.0146  std_return=0.1050  max_drawdown_synth=0.4946
+  ret_prev_equity_corr=-0.1215  avg_equity=52906  acf1_return=-0.0365
+
+Cluster 6  (n=16)  strategy_type: High risk / High return | Higher tail risk | Negative AUM sensitivity | Mean-reversion
+  mean_return=0.0235  std_return=0.1702  max_drawdown_synth=0.6046
+  ret_prev_equity_corr=-0.1969  avg_equity=27833  acf1_return=-0.1061
+
+Cluster 7  (n=65)  strategy_type: High risk / High return | Higher tail risk | Large size
+  mean_return=0.0082  std_return=0.1216  max_drawdown_synth=0.7090
+  ret_prev_equity_corr=0.0056  avg_equity=162528  acf1_return=-0.0358
+
+Cluster 8  (n=122)  strategy_type: Low volatility
+  mean_return=0.0036  std_return=0.0417  max_drawdown_synth=0.1976
+  ret_prev_equity_corr=-0.1023  avg_equity=22967  acf1_return=-0.0218
+
+Cluster 9  (n=27)  strategy_type: Low volatility | Mean-reversion | Vol clustering
+  mean_return=0.0014  std_return=0.0180  max_drawdown_synth=0.1452
+  ret_prev_equity_corr=-0.0837  avg_equity=43899  acf1_return=-0.1468
+
+Cluster 10  (n=46)  strategy_type: Low volatility | Negative AUM sensitivity | Vol clustering
+  mean_return=0.0021  std_return=0.0232  max_drawdown_synth=0.1361
+  ret_prev_equity_corr=-0.2132  avg_equity=17348  acf1_return=0.0199
+
+Cluster 11  (n=20)  strategy_type: High risk / High return | Higher tail risk
+  mean_return=0.0066  std_return=0.1349  max_drawdown_synth=0.9036
+  ret_prev_equity_corr=-0.1225  avg_equity=24064  acf1_return=-0.0151
+
+Cluster 12  (n=56)  strategy_type: High risk / High return | Higher tail risk
+  mean_return=0.0156  std_return=0.2567  max_drawdown_synth=1.0000
+  ret_prev_equity_corr=-0.0185  avg_equity=33213  acf1_return=-0.0509

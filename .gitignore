@@ -1,0 +1,23 @@
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Jupyter / misc
+.ipynb_checkpoints/
+
+# Keep code and data artifacts tracked; ignore only temporary Office locks
+~$*.docx
+
+# Problem statement & raw data (not tracked)
+笔试题 - ArkStream量化研究员.docx
+笔试题 - ArkStream量化研究员.pdf
+data/raw/笔试题数据包.csv

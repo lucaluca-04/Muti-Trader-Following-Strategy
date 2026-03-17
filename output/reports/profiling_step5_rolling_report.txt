@@ -1,0 +1,10 @@
+Rolling backtest report (no look-ahead)
+============================================================
+
+Method: at each rebalance, features + clustering + core/satellite + risk parity use only data in (window_start, rebalance]. Forward PnL uses only returns after rebalance date.
+
+Window: expanding  Rebalance: ME  Core ratio: 80%
+Core = low vol (median std <= 0.055), Satellite = rest (max_dd < 0.95).
+
+Rebalance dates: 5  Weight rows: 42
+Portfolio total return: 101.62%  Ann. vol: 54.78%  Max drawdown: -14.23%
