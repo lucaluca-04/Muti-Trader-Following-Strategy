@@ -12,6 +12,22 @@ The repository structure is refactored so that all reusable logic lives in `src/
 
 ---
 
+### 中文简介
+
+本项目实现了一个面向 **Hyperliquid 永续合约市场** 的「多交易员跟单」研究与回测框架，核心目标是：
+
+- 将原始账户权益/盈亏数据整理为可分析的日度收益序列
+- 构建稳健的交易员画像特征（收益分布、回撤、活跃度、容量敏感性等）
+- 通过 **UMAP + HDBSCAN** 将交易员按风格聚类
+- 构建 **Core–Satellite（核心/卫星）** 的多交易员组合，并在层内做风险平价分配，同时加入简化的容量约束
+- 进行 **rolling、no-look-ahead（无前视）** 的滚动回测：每次调仓只使用调仓日前可获得的信息
+
+下面是本项目 rolling 回测生成的权益曲线与回撤（图中标注了再平衡日期）：
+
+![Rolling backtest equity and drawdown](output/figures/profiling_step5_rolling_fig.png)
+
+---
+
 ### 1. Project Structure
 
 - `main.py`  
@@ -153,6 +169,20 @@ This will:
   - `data/processed/profiling_step5_rolling_rebalance_stats.csv`
   - `output/reports/profiling_step5_rolling_report.txt`
   - `output/figures/profiling_step5_rolling_fig.png`
+
+---
+
+### 使用说明（中文）
+
+1. 将题目给的原始数据文件放到 `data/raw/`（默认文件名为 `笔试题数据包.csv`）。
+2. 根据需要调整 `config.yaml`（例如 `min_days`、`min_cluster_size`、`top_traders_per_cluster` 等）。
+3. 运行：
+
+```bash
+python main.py
+```
+
+你会在 `data/processed/` 里看到中间结果与回测输出，在 `output/figures/` 和 `output/reports/` 里看到图和报告。
 
 ---
 
