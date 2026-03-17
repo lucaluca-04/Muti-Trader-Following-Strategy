@@ -14,7 +14,7 @@ The repository structure is refactored so that all reusable logic lives in `src/
 
 ### 中文简介
 
-本项目实现了一个面向 **Hyperliquid 永续合约市场** 的「多交易员跟单」研究与回测框架，核心目标是：
+本项目实现了一个面向 **Hyperliquid 期货市场** 的「多交易员跟单」研究与回测框架，核心目标是：
 
 - 将原始账户权益/盈亏数据整理为可分析的日度收益序列
 - 构建稳健的交易员画像特征（收益分布、回撤、活跃度、容量敏感性等）
